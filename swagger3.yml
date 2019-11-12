@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  description: the swagger yaml file
+  version: 1.0.0
+  title: Swagger Rest Article
+servers: 
+  - url: http://127.0.0.1:5000/api/
+  
+paths:
+  /get591:
+    get:
+      operationId: rent.getData
+      tags:
+        - select591rent
+      summary: read the entire list of select591rent data 
+      description: read the list of NeedChangeCarByRegion
+      parameters:
+        - name: city
+          in: query
+          schema:
+            type: string
+          description: select city
+          required: true
+        - name: name
+          in: query
+          schema:
+            type: string
+          description: 房東名稱
+          required: false
+        - name: grnder
+          in: query
+          schema:
+            type: string
+          description: 房東性別
+          required: false  
+        - name: cellPhone
+          in: query
+          schema:
+            type: string
+          description: 手機 09XX-XXX-XXX
+          required: false  
+        - name: Seller_type
+          in: query
+          schema:
+            type: string
+          description: 屋主 代理人 仲介
+          required: false
+        - name: Types
+          in: query
+          schema:
+            type: string
+          description: 電梯大樓 公寓 透天厝 別墅
+          required: false
+        - name: situation
+          in: query
+          schema:
+            type: string
+          description: 整層住家 獨立套房 分租套房 雅房
+          required: false
+        - name: claim
+          in: query
+          schema:
+            type: string
+          description: 男生 女生 男女生皆可
+          required: false
+      responses:
+        '200':
+          description: successful read NeedChangeCarByRegion list
+          content:
+            application/json: 
+              schema:
+                type: string
