@@ -13,7 +13,7 @@ paths:
       tags:
         - select591rent
       summary: read the entire list of select591rent data 
-      description: read the list of NeedChangeCarByRegion
+      description: read the list of 591
       parameters:
         - name: city
           in: query
